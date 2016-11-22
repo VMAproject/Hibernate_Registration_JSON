@@ -1,5 +1,5 @@
 # Hibernate_Registration_JSON
-https://travis-ci.org/VMAproject/Hibernate_Registration_JSON.svg?branch=master
+[![Build Status](https://travis-ci.org/VMAproject/Hibernate_Registration_JSON.svg?branch=master)](https://travis-ci.org/VMAproject/Hibernate_Registration_JSON)
 
 
 - Tomcat 9
