@@ -1,7 +1,5 @@
 # Hibernate_Registration_JSON
 
-[![Build Status]
-[![Coverage Status]
 
 
 - Tomcat 9
