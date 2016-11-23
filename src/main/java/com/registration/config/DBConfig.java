@@ -19,7 +19,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySource("classpath:database.properties")
+@PropertySource("classpath:db.properties")
 public class DBConfig {
 
     @Autowired
@@ -34,7 +34,7 @@ public class DBConfig {
     public SessionFactory sessionFactory() {
         LocalSessionFactoryBean lsfb = new LocalSessionFactoryBean();
         lsfb.setDataSource(getDataSource());
-        lsfb.setPackagesToScan("org.javabase.apps");
+        lsfb.setPackagesToScan("com.registration");
         lsfb.setHibernateProperties(hibernateProperties());
         try {
             lsfb.afterPropertiesSet();
