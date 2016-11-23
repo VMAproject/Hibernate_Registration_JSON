@@ -1,6 +1,6 @@
 package com.registration.service;
 
-import com.registration.entity.Role;
+import com.registration.model.Role;
 
 import java.util.List;
 

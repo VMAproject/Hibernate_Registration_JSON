@@ -1,7 +1,7 @@
 
 package com.registration.service;
 
-import com.registration.entity.User;
+import com.registration.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

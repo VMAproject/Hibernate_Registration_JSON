@@ -1,6 +1,6 @@
 package com.registration.controller;
 
-import com.registration.entity.User;
+import com.registration.model.User;
 import com.registration.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

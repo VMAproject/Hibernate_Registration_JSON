@@ -1,6 +1,6 @@
 package com.registration.dao;
 
-import com.registration.entity.User;
+import com.registration.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;

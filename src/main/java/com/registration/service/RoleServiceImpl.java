@@ -1,6 +1,6 @@
 package com.registration.service;
 
-import com.registration.entity.Role;
+import com.registration.model.Role;
 import com.registration.dao.RoleDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

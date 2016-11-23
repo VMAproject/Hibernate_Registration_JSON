@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.registration.entity;
+package com.registration.model;
 
 import javax.persistence.*;
 import java.io.Serializable;

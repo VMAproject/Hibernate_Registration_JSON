@@ -1,6 +1,6 @@
 package com.registration.service;
 
-import com.registration.entity.User;
+import com.registration.model.User;
 import com.registration.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

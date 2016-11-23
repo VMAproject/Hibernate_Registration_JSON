@@ -7,6 +7,18 @@
     <groupId>com.registration</groupId>
     <artifactId>Hibernate_Registration_JSON</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <name>Hibernate-Registration</name>
     <packaging>war</packaging>
 
@@ -18,9 +30,9 @@
         <jackson.version>2.6.3</jackson.version>
         <org.aspectj-version>1.6.10</org.aspectj-version>
         <org.slf4j-version>1.6.6</org.slf4j-version>
-
-
     </properties>
+
+
     <dependencies>
         <!-- Spring -->
         <dependency>
