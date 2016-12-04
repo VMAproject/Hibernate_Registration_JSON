@@ -2,6 +2,7 @@ package com.registration.dao;
 
 import com.registration.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,7 +36,7 @@ public class UserDaoImpl implements UserDao {
             hibernateTemplate.save(user);
 
             return true;
-        } catch (Exception e) {
+        } catch (DataAccessException e) {
             e.printStackTrace();
             return false;
         }

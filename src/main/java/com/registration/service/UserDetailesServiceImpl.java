@@ -38,9 +38,7 @@ public class UserDetailesServiceImpl implements UserDetailsService {
             org.springframework.security.core.userdetails.User securedUser =
                     new org.springframework.security.core.userdetails.User(username, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
             return securedUser;
-        } else {
-            throw new UsernameNotFoundException("Invalid User");
-        }
+        } else throw new UsernameNotFoundException("Invalid User");
 
     }
 
