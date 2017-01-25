@@ -1,6 +1,4 @@
-/**
- *
- */
+
 package com.registration.model;
 
 import javax.persistence.*;

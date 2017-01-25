@@ -1,4 +1,3 @@
-
 function checkLogin(username) {
     if (username.length < 5) document.getElementById("e_login").style.display = "inline";
     else document.getElementById("e_login").style.display = "none";
