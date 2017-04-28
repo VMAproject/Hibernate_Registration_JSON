@@ -17,6 +17,7 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.util.Properties;
 
+
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
@@ -32,16 +33,16 @@ public class DBConfig {
 
     @Bean
     public SessionFactory sessionFactory() {
-        LocalSessionFactoryBean lsfb = new LocalSessionFactoryBean();
-        lsfb.setDataSource(getDataSource());
-        lsfb.setPackagesToScan("com.registration");
-        lsfb.setHibernateProperties(hibernateProperties());
+        LocalSessionFactoryBean localSessionFactoryBean = new LocalSessionFactoryBean();
+        localSessionFactoryBean.setDataSource(getDataSource());
+        localSessionFactoryBean.setPackagesToScan("com.registration");
+        localSessionFactoryBean.setHibernateProperties(hibernateProperties());
         try {
-            lsfb.afterPropertiesSet();
+            localSessionFactoryBean.afterPropertiesSet();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return lsfb.getObject();
+        return localSessionFactoryBean.getObject();
     }
 
     @Bean
@@ -55,7 +56,7 @@ public class DBConfig {
     }
 
     @Bean
-    public HibernateTransactionManager hibTransMan() {
+    public HibernateTransactionManager hibernateTransactionManager() {
         return new HibernateTransactionManager(sessionFactory());
     }
 

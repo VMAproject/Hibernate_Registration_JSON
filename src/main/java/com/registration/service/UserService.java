@@ -1,6 +1,7 @@
 package com.registration.service;
 
-import com.registration.model.User;
+
+import com.registration.entity.User;
 
 import java.util.List;
 

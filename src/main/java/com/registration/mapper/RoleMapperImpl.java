@@ -1,6 +1,7 @@
-package com.registration.dao;
+package com.registration.mapper;
 
-import com.registration.model.Role;
+
+import com.registration.entity.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @SuppressWarnings("unchecked")
 @Repository
-public class RoleDaoImpl implements RoleDao {
+public class RoleMapperImpl implements RoleMapper {
 
     @Autowired
     private HibernateTemplate hibernateTemplate;

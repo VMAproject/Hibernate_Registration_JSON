@@ -1,37 +1,37 @@
+
 package com.registration.service;
 
-import com.registration.model.Role;
-import com.registration.dao.RoleDao;
+import com.registration.entity.Role;
+import com.registration.mapper.RoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
 @Service
 public class RoleServiceImpl implements RoleService {
 
-	@Autowired
-	RoleDao rolemapper;
-	
-	@Override
-	public List<Role> getAllUsers() {
-		return rolemapper.getAllUsers();
-	}
+    @Autowired
+    RoleMapper rolemapper;
 
-	@Override
-	public Role getRoleById(int roleId) {
-		return rolemapper.getRoleById(roleId);
-	}
+    @Override
+    public List<Role> getAllUsers() {
+        return rolemapper.getAllUsers();
+    }
 
-	@Override
-	public boolean addRole(Role role) {
-		return rolemapper.addRole(role);
-	}
+    @Override
+    public Role getRoleById(int roleId) {
+        return rolemapper.getRoleById(roleId);
+    }
 
-	@Override
-	public boolean roleExists(String roleName) {
-		return rolemapper.roleExists(roleName);
-	}
+    @Override
+    public boolean addRole(Role role) {
+        return rolemapper.addRole(role);
+    }
+
+    @Override
+    public boolean roleExists(String roleName) {
+        return rolemapper.roleExists(roleName);
+    }
 
 }

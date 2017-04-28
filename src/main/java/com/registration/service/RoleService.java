@@ -1,9 +1,10 @@
+
 package com.registration.service;
 
-import com.registration.model.Role;
+
+import com.registration.entity.Role;
 
 import java.util.List;
-
 
 public interface RoleService {
 

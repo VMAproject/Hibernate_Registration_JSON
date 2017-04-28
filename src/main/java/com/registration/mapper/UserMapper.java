@@ -1,10 +1,11 @@
-package com.registration.dao;
+package com.registration.mapper;
 
-import com.registration.model.User;
+
+import com.registration.entity.User;
 
 import java.util.List;
 
-public interface UserDao {
+public interface UserMapper {
 
     List<User> getAllUsers();
 

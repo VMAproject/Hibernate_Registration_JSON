@@ -1,7 +1,7 @@
 package com.registration.controller;
 
-import com.registration.model.Role;
-import com.registration.model.User;
+
+import com.registration.entity.User;
 import com.registration.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -34,10 +34,7 @@ public class LoginController {
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public Map<String, Object> registration(@RequestBody User user) {
         Map<String, Object> response = new HashMap<String, Object>();
-        Role role = new Role();
-        role.setRoleid(1);
 
-        user.setRole(role);
         user.setRegdate(new Date());
         user.setIsactive("Y");
         user.setIsnonexpired("Y");
@@ -58,7 +55,9 @@ public class LoginController {
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) new SecurityContextLogoutHandler().logout(request, response, auth);
+        if (auth != null) {
+            new SecurityContextLogoutHandler().logout(request, response, auth);
+        }
         return "redirect:/login";
     }
 

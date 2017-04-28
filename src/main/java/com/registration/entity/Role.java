@@ -1,5 +1,8 @@
 
-package com.registration.model;
+package com.registration.entity;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -7,15 +10,23 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-
+@Getter
+@Setter
 @Entity
 @Table(name = "role")
 public class Role implements Serializable {
 
     private static final long serialVersionUID = 7406695508037970942L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "roleid", unique = true, nullable = false)
     private Integer roleid;
+
+    @Column(name = "rolename", nullable = false, length = 45)
     private String rolename;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "role")
     private Set<User> users = new HashSet<User>(0);
 
     public Role() {
@@ -30,33 +41,5 @@ public class Role implements Serializable {
         this.users = users;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "roleid", unique = true, nullable = false)
-    public Integer getRoleid() {
-        return this.roleid;
-    }
-
-    public void setRoleid(Integer roleid) {
-        this.roleid = roleid;
-    }
-
-    @Column(name = "rolename", nullable = false, length = 45)
-    public String getRolename() {
-        return this.rolename;
-    }
-
-    public void setRolename(String rolename) {
-        this.rolename = rolename;
-    }
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "role")
-    public Set<User> getUsers() {
-        return this.users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
 
 }
